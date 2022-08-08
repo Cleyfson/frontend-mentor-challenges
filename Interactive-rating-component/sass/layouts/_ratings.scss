@@ -1,0 +1,64 @@
+@use '../base/' as t;
+
+.box {
+  background-color: var(--neutral-blue);
+  padding: 2em;
+  width: 25em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25em;
+  gap: 1em;
+
+  &__icon {
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    box-shadow:  inset 1px 1px 1px 1px rgba($color: #000000, $alpha: .1);
+  }
+
+  &__button {
+    background-color: var(--primary);
+    border: none;
+    padding: 0.625em;
+    color: var(--neutral-white);
+    font-weight: t.$fw-b;
+    text-transform: uppercase;
+    border-radius: 1.25em;
+    transition: background-color 0.350s ease, color 0.5s ease;
+
+    &:hover {
+      background-color: var(--neutral-white);
+      color: var(--primary);
+    }
+  }
+}
+
+.ratings {
+  padding-left: 0; //??
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    display: grid;
+    place-content: center;
+    list-style: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background-color: hsl(215, 18%, 26%);
+    transition: background-color 0.375s ease, color 0.5s ease;
+
+    &.checked {
+      background-color: var(--primary);
+      color: var(--neutral-white);
+    }
+    &:hover, &:focus {
+      background-color: var(--neutral-gray);
+      color: var(--neutral-white);
+    }
+  }
+}
+

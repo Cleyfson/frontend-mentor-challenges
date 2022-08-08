@@ -1,0 +1,41 @@
+@use './typography' as t;
+
+:root {
+  --primary:  hsl(25, 97%, 53%); 
+  --neutral-white:  hsl(0, 0%, 100%); 
+  --neutral-gray:  hsl(216, 12%, 54%); 
+  --neutral-light-gray:  hsl(217, 12%, 63%); 
+  --neutral-blue:  hsl(213, 19%, 18%); 
+  --neutral-dark-blue:  hsl(216, 12%, 8%); 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--neutral-dark-blue);
+  font-family: t.$ft ;
+  font-size: t.$fs-n;
+  color: var(--neutral-light-gray);
+  transition: 0.5s ease;
+
+
+  h2 {
+    color: var(--neutral-white);
+  }
+}
+
+// component ???
+.box , .after {
+  background-color: var(--neutral-blue);
+  padding: 2em;
+  width: 25em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25em;
+  gap: 1em;
+}
