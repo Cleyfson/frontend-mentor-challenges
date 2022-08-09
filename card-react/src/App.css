@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+
+.app {
+    background-color: #1A1B21;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 25em;
+    height: 50em;
+}
+
+.app__image {
+    border-radius: 0.8em 0.8em 0 0;
+    object-fit: cover;
+    height: 20em;
+}
+
+.content__title {
+    margin-top: 1em;
+    font-size: 2rem;
+}
+
+.content__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F3BF99;
+}
+
+.content__email {
+    margin-top: 0.5em;
+    font-size: 0.8rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em auto 0 auto;
+    width: 90%;
+}
+
+.buttons__btn {
+    border: none;
+    padding: 1em 3.3em;
+    border-radius: 0.5em;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn--two {
+    background-color: #5093E2;
+    color: #FFFFFF;
+}
+
+.main-content {
+    width: 85%;
+    margin: 2em auto;
+    text-align: left;
+}
+
+.main-content__title {
+    margin-top: 0.6em;
+}
+
+.main-content__text {
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    background-color: #161619;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em;
+    color: #918E9B;
+    font-size: 2.5em;
+    border-radius: 0 0 0.3em 0.3em;
+}
