@@ -27,6 +27,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 600px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 .container {
   background-color: var(--clr-bg-300);
@@ -34,6 +44,16 @@ body {
   position: relative;
   width: 90%;
   padding: 3em 2em;
+}
+@media (min-width: 900px) {
+  .container {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+  }
 }
 
 /* reset based on https://piccalil.li/blog/a-modern-css-reset/ */
@@ -114,27 +134,47 @@ select {
   }
 }
 .pic-design {
-  position: absolute;
   width: 75%;
+  margin-top: -12.2em;
   margin-inline: auto;
-  top: -23.5%;
-  left: 0;
-  right: 0;
+}
+@media (min-width: 900px) {
+  .pic-design {
+    margin: 0 0 0 -10.6em;
+  }
 }
 
 .pic-design__main {
   width: 100%;
+  position: relative;
 }
 
 .pic-design__alt {
-  margin-top: -7em;
+  margin-top: -6em;
   width: 100%;
+}
+@media (min-width: 900px) {
+  .pic-design__alt {
+    margin-top: -12em;
+  }
+}
+
+@media (min-width: 900px) {
+  .faq {
+    width: 65%;
+  }
 }
 
 .faq__title {
-  margin-top: 5em;
+  margin-top: 1em;
   margin-bottom: 1em;
+  font-size: 2rem;
   text-align: center;
+}
+@media (min-width: 900px) {
+  .faq__title {
+    margin-top: 0;
+  }
 }
 
 .faq__item {

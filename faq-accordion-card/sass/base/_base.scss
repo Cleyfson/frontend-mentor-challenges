@@ -1,42 +1,59 @@
 .attribution {
-	font-size: 11px;
-	text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-	color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 :root {
-	--clr-primary: hsl(14, 88%, 65%);
-	--clr-neutral: hsl(240, 5%, 91%);
+  --clr-primary: hsl(14, 88%, 65%);
+  --clr-neutral: hsl(240, 5%, 91%);
 
-	--clr-txt-100: hsl(240, 6%, 50%);
-	--clr-txt-200: hsl(237, 12%, 33%);
-	--clr-txt-300: hsl(238, 29%, 16%);
+  --clr-txt-100: hsl(240, 6%, 50%);
+  --clr-txt-200: hsl(237, 12%, 33%);
+  --clr-txt-300: hsl(238, 29%, 16%);
 
-	--clr-bg-100: hsl(273, 75%, 66%);
-	--clr-bg-200: hsl(240, 73%, 65%);
-	--clr-bg-300: hsl(0, 0%, 100%);
+  --clr-bg-100: hsl(273, 75%, 66%);
+  --clr-bg-200: hsl(240, 73%, 65%);
+  --clr-bg-300: hsl(0, 0%, 100%);
 }
 
 body {
-	background-color: var(--clr-bg-100);
+  background-color: var(--clr-bg-100);
 
-	font-family: "Kumbh Sans", sans-serif;
-	font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 600px) {
+    font-size: 17px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 14px;
+  }
 }
 
 .container {
-	background-color: var(--clr-bg-300);
-	border-radius: 1.5em;
+  background-color: var(--clr-bg-300);
+  border-radius: 1.5em;
 
-	position: relative;
-	width: 90%;
-	padding: 3em 2em;
+  position: relative;
+  width: 90%;
+  padding: 3em 2em;
+
+  @media (min-width: 900px) {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+  }
 }
