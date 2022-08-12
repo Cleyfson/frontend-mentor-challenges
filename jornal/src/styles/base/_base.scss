@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: hsl(0, 89%, 66%);
+  --color-secondary: hsl(254, 6%, 58%);
+  --color-neutral-400: hsl(0, 0%, 100%);
+  --color-neutral-500: hsl(0, 0%, 96%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  width: 35em;
+  height: 44em;
+}

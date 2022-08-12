@@ -3,7 +3,6 @@ import data from '../assets/data';
 
 const MainContent = () => {
   const jornal = data.map((item) => {
-    console.log(item);
     return <Item item={item} />;
   });
 

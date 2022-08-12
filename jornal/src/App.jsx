@@ -1,4 +1,5 @@
-import './styles/App.css';
+// import './styles/App.css';
+import './styles/_main.scss';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 
