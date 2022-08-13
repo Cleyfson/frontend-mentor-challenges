@@ -1,0 +1,244 @@
+:root {
+  --clr-primary-100: hsl(210, 46%, 95%);
+  --clr-primary-200: hsl(212, 23%, 69%);
+  --clr-primary-300: hsl(214, 17%, 51%);
+  --clr-primary-400: hsl(217, 19%, 35%);
+  --clr-neutral: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-primary-100);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.main-article {
+  width: min(90%, 70em);
+  min-height: 30vh;
+  box-shadow: 2px 2px 16px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 1em;
+}
+.main-article__img {
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+@media (min-width: 900px) {
+  .main-article__img {
+    width: 45%;
+    border-radius: 1em 0 0 1em;
+  }
+}
+@media (min-width: 900px) {
+  .main-article {
+    border-radius: 1em;
+    display: flex;
+  }
+}
+
+.details {
+  border-radius: 0 0 1em 1em;
+  padding: 3em 2.5em 1em 2.5em;
+  position: relative;
+  background-color: var(--clr-neutral);
+}
+@media (min-width: 900px) {
+  .details {
+    border-radius: 0 1em 1em 0;
+  }
+}
+.details__title {
+  padding-bottom: 1em;
+  color: var(--clr-primary-400);
+}
+@media (min-width: 900px) {
+  .details__title {
+    padding-bottom: 0.5em;
+    font-size: 1.4rem;
+  }
+}
+.details__description {
+  padding-bottom: 1em;
+  color: var(--clr-primary-300);
+}
+@media (min-width: 900px) {
+  .details__description {
+    font-size: 0.9rem;
+  }
+}
+
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 0 0 0;
+}
+.author__name {
+  color: var(--clr-primary-400);
+}
+.author__date-post {
+  color: var(--clr-primary-200);
+}
+.author__avatar {
+  border-radius: 50%;
+  width: 3em;
+}
+.author__icon {
+  aspect-ratio: 1/1;
+  width: 2.5em;
+  margin-left: auto;
+  border-radius: 50%;
+  background-color: var(--clr-primary-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.author__icon:hover, .author__icon:focus {
+  background-color: var(--clr-primary-200);
+}
+
+.social-icons {
+  opacity: 1;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  padding: 0.5em 2.5em;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  height: 5.4em;
+  border-radius: 0 0 1em 1em;
+  background-color: var(--clr-primary-400);
+  transition: opacity 500ms linear, z-index 500ms linear;
+}
+.social-icons__title {
+  margin-left: auto;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--clr-primary-200);
+  letter-spacing: 0.2rem;
+}
+@media (min-width: 900px) {
+  .social-icons__title {
+    margin-left: unset;
+  }
+}
+.social-icons__btn {
+  aspect-ratio: 1/1;
+  width: 2.5em;
+  margin-left: auto;
+  border-radius: 50%;
+  background-color: var(--clr-primary-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons__btn:hover, .social-icons__btn:focus {
+  background-color: var(--clr-primary-200);
+}
+@media (min-width: 900px) {
+  .social-icons {
+    gap: 2em;
+    border-radius: 1em;
+    right: -8em;
+    bottom: 7.5em;
+    width: 25em;
+  }
+  .social-icons__btn {
+    display: none;
+  }
+}
+
+.social-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.hide-icons .social-icons {
+  opacity: 0;
+  z-index: -1;
+}/*# sourceMappingURL=main.css.map */

@@ -6,32 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
 
   <title>Frontend Mentor | Article preview component</title>
-  <style>
-    @import url('./sass/main.scss');
-  </style>
 </head>
 
 <body>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
+  <article class="main-article">
+    <img class="main-article__img" src="./images/drawers.jpg" alt="">
 
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
+    <div id="details" class="details hide-icons">
+      <h2 class="details__title">
+        Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home
+      </h2>
+      <p class="details__description">
+        Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.
+      </p>
+      <div id="author" class="author">
+        <img class="author__avatar" src="./images/avatar-michelle.jpg" alt="">
+        <div class="autor__details">
+          <h3 class="author__name">Michelle Appleton</h3>
+          <p class="author__date-post">28 Jun 2020</p>
+        </div>
+        <div id="btn-show" class="author__icon">
+          <img class="author__icon-post" src="./images/icon-share.svg" alt="">
+        </div>
+      </div>
+      <div id="socials" class="social-icons">
+        <p class="social-icons__title">share</p>
+        <img class="social-icon" src="./images/icon-facebook.svg" alt="">
+        <img class="social-icon" src="./images/icon-twitter.svg" alt="">
+        <img class="social-icon" src="./images/icon-pinterest.svg" alt="">
+        <div id="btn-hide" class="social-icons__btn">
+          <img class="author__icon-post" src="./images/icon-share-clear.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </article>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
