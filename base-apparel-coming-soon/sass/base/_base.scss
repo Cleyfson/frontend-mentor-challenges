@@ -1,0 +1,123 @@
+:root {
+  --clr-primary-100: hsl(0, 36%, 70%);
+  --clr-primary-200: hsl(0, 93%, 68%);
+  --clr-primary-300: hsl(0, 6%, 24%);
+
+  --linear-neutral: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --linear-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  --font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--linear-neutral);
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    text-align: left;
+  }
+}
+
+.header {
+  width: 12em;
+  padding: 2em;
+
+  @media (min-width: 900px) {
+    margin-top: 2em;
+    margin-left: 21%;
+    width: 14em;
+  }
+}
+
+.hero-img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 20em;
+
+  @media (min-width: 820px) {
+    height: 100%;
+    grid-row: span 2;
+  }
+
+  @media (min-width: 1400px) {
+    height: 100vh;
+    grid-row: span 2;
+  }
+}
+
+.form {
+  padding: 2.5em;
+
+  @media (min-width: 900px) {
+    width: 60%;
+    margin-inline: auto;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    line-height: 1;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+
+    @media (min-width: 820px) {
+      font-size: 4rem;
+    }
+
+    span {
+      font-weight: 300;
+      color: var(--clr-primary-100);
+    }
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    padding: 1em 0;
+    color: var(--clr-primary-100);
+
+    @media (min-width: 820px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__detail {
+    padding-top: 1.5em;
+    width: 100%;
+    display: flex;
+  }
+
+  &__email {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid var(--clr-primary-100);
+    font-size: 1.2rem;
+    border-radius: 2em;
+    color: var(--clr-primary-100);
+
+    &::placeholder {
+      font-size: 0.95rem;
+      padding: 0.5em;
+      color: var(--clr-primary-100);
+    }
+  }
+
+  &__button {
+    margin-left: -2em;
+
+    width: 25%;
+    border-radius: 2em;
+    border: none;
+    background: var(--linear-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
