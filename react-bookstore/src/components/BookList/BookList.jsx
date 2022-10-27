@@ -1,10 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 
 const BookList = () => {
 	const [books, setBooks] = useState([]);
+	const navigate = useNavigate();
 
 	const getBooks = async () => {
 		try {
@@ -14,7 +16,6 @@ const BookList = () => {
 			const data = await response.data;
 			const results = await data.results;
 
-			console.log(results.lists[0].books);
 			setBooks(results.lists[0].books);
 		} catch (error) {
 			console.log(error);
@@ -31,7 +32,12 @@ const BookList = () => {
 				return (
 					<div key={book.primary_isbn10} className='book'>
 						<div>
-							<img className='book__image' src={book.book_image} alt='/' />
+							<img
+								className='book__image'
+								src={book.book_image}
+								alt='/'
+								onClick={() => navigate(`/books/${book.primary_isbn10}`)}
+							/>
 							<h4 className='book__title'>{book.title}</h4>
 							<h5 className='book__author'>{book.author}</h5>
 						</div>
