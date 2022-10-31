@@ -4,6 +4,6 @@ describe('My First Test', () => {
 	});
 
 	it('get navbar', () => {
-		cy.get('.navbar').contains('.navbar');
+		cy.get('body').find('.navbar');
 	});
 });
