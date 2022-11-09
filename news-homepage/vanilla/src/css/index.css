@@ -74,6 +74,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
