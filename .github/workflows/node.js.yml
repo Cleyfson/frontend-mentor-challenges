@@ -27,17 +27,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
     - run: |
-        cd react-test
+        cd frontend-mentor-challenges/react-test
         npm run build
         cache: 'npm'
     - name: Run components tests
     - run: |
-        cd react-test
+        cd frontend-mentor-challenges/react-test
         npm run test
         cache: 'npm'
     - name: Start the app
     - run: |
-        cd react-test
+        cd frontend-mentor-challenges/react-test
         npm run preview &
         npx wait-on --timeout 60000
 #     - run: npm ci
