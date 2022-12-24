@@ -13,4 +13,8 @@ body {
 
 	font-size: 16px;
 	font-family: 'Karla', sans-serif;
+	background-color: var(--light-gray);
+
+	display: grid;
+	place-content: center;
 }
