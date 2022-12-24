@@ -1,10 +1,78 @@
 @forward './base/';
+@use './base/' as base;
 
 section {
 	width: 85%;
 	margin: auto;
-	padding: 2em;
 	background-color: white;
 	border-radius: 0.5em;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 2em;
+}
+
+.title {
+	color: white;
+
+	&--blue {
+		color: var(--cyan);
+	}
+}
+
+.text {
+	color: white;
+
+	&--transparent {
+		opacity: 0.6;
+	}
+}
+
+.community {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	&__subtitle {
+		color: var(--bright-yellow);
+	}
+
+	&__text {
+		color: var(--grayish-blue);
+	}
+}
+
+.subscription {
+	width: 100%;
+	background-color: var(--cyan);
+
+	&__fee {
+		color: white;
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+
+	span {
+		font-size: 2rem;
+		font-weight: var(--fw-bold);
+	}
+
+	&__button {
+		border: none;
+		padding: 1em;
+		border-radius: 0.5em;
+
+		color: white;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		background-color: var(--bright-yellow);
+	}
+}
+
+.about-us {
+	background-color: var(--cyan-light);
 }
